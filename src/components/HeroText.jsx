@@ -18,7 +18,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi I'm Ali
+          Hi I'm Lyle
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -50,6 +50,17 @@ const HeroText = () => {
           >
             Web Solutions
           </motion.p>
+          <motion.a
+            href="/assets/LYLE CV.pdf"
+            download
+            className="mt-4 text-lg text-neutral-300 hover:text-white transition-colors duration-300 border-b border-neutral-300 hover:border-white"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2 }}
+          >
+            Download CV
+          </motion.a>
         </div>
       </div>
       {/* Mobile View */}
@@ -61,7 +72,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi,I'm Ali
+          Hi,I'm Lyle
         </motion.p>
         <div>
           <motion.p
@@ -93,6 +104,17 @@ const HeroText = () => {
           >
             Web Applications
           </motion.p>
+          <motion.a
+            href="/assets/LYLE CV.pdf"
+            download
+            className="block mt-4 text-lg text-neutral-300 hover:text-white transition-colors duration-300 border-b border-neutral-300 hover:border-white"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2 }}
+          >
+            Download CV
+          </motion.a>
         </div>
       </div>
     </div>
