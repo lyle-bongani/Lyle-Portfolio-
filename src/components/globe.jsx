@@ -1,7 +1,7 @@
 "use client";
 
 import createGlobe from "cobe";
-import { useMotionValue, useSpring } from "motion/react";
+import { useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 import { twMerge } from "tailwind-merge";
@@ -11,7 +11,7 @@ const MOVEMENT_DAMPING = 1400;
 const GLOBE_CONFIG = {
   width: 800,
   height: 800,
-  onRender: () => {},
+  onRender: () => { },
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,

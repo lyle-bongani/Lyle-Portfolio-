@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+
 function Navigation() {
   return (
     <ul className="nav-ul">
@@ -26,6 +27,7 @@ function Navigation() {
     </ul>
   );
 }
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (

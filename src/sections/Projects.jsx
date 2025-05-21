@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Project from "../components/Project";
 import { myProjects } from "../constants";
-import { motion, useMotionValue, useSpring } from "motion/react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 const Projects = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
