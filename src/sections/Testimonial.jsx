@@ -8,25 +8,25 @@ const ReviewCard = ({ img, name, username, body }) => {
   return (
     <figure
       className={twMerge(
-        "relative h-full w-[280px] sm:w-[320px] md:w-[360px] cursor-pointer overflow-hidden rounded-xl border p-4 sm:p-6 border-gray-50/[.1] bg-gradient-to-r bg-indigo to-storm hover:bg-royal hover-animation"
+        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-50/[.1] bg-gradient-to-r bg-indigo to-storm hover:bg-royal hover-animation"
       )}
     >
-      <div className="flex flex-row items-center gap-3">
+      <div className="flex flex-row items-center gap-2">
         <img
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 object-cover"
+          className="rounded-full bg-white/10"
+          width="32"
+          height="32"
+          alt=""
           src={img}
-          alt={name}
         />
         <div className="flex flex-col">
-          <figcaption className="text-sm sm:text-base font-medium text-white">
+          <figcaption className="text-sm font-medium text-white">
             {name}
           </figcaption>
-          <p className="text-xs sm:text-sm font-medium text-white/40">{username}</p>
+          <p className="text-xs font-medium text-white/40">{username}</p>
         </div>
       </div>
-      <blockquote className="mt-3 sm:mt-4 text-sm sm:text-base text-neutral-300 line-clamp-4">
-        {body}
-      </blockquote>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
     </figure>
   );
 };
@@ -35,7 +35,7 @@ export default function Testimonial() {
   return (
     <div className="items-start mt-25 md:mt-35 c-space">
       <h2 className="text-heading">Testimonials</h2>
-      <div className="relative flex flex-col items-center justify-center w-full mt-8 sm:mt-12 overflow-hidden">
+      <div className="relative flex flex-col items-center justify-center w-full mt-12 overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />

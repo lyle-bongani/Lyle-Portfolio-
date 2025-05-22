@@ -11,73 +11,60 @@ const ProjectDetails = ({
   closeModal,
 }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-y-auto bg-black/80 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full p-4 overflow-y-auto backdrop-blur-sm">
       <motion.div
-        className="relative w-[95%] sm:w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] max-w-4xl mx-auto my-8 border shadow-lg rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
+        className="relative w-full max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.5 }}
-        transition={{ duration: 0.3 }}
       >
         <button
           onClick={closeModal}
-          className="absolute p-2 rounded-full top-4 right-4 bg-midnight/80 hover:bg-gray-500/80 transition-colors"
-          aria-label="Close modal"
+          className="absolute p-2 rounded-sm top-2 right-2 sm:top-5 sm:right-5 bg-midnight hover:bg-gray-500"
         >
-          <img src="assets/close.svg" className="w-5 h-5 sm:w-6 sm:h-6" alt="Close" />
+          <img src="assets/close.svg" className="w-4 h-4 sm:w-6 sm:h-6" alt="close" />
         </button>
-
-        <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96">
-          <img
-            src={image}
-            alt={title}
-            className="object-cover w-full h-full rounded-t-2xl"
-          />
-        </div>
-
-        <div className="p-4 sm:p-6 md:p-8">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3">
-            {title}
-          </h3>
-
-          <p className="text-sm sm:text-base md:text-lg text-neutral-300 mb-4 sm:mb-6">
-            {description}
-          </p>
-
-          {subDescription && (
-            <p className="text-sm sm:text-base text-neutral-400 mb-4 sm:mb-6">
-              {subDescription}
-            </p>
-          )}
-
-          <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 text-xs sm:text-sm rounded-full bg-storm/50 text-neutral-300"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 px-4 py-2 text-sm sm:text-base text-center text-white transition-colors rounded-lg bg-royal hover:bg-lavender"
-            >
-              Live Demo
-            </a>
-            <a
-              href={sourceCode}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 px-4 py-2 text-sm sm:text-base text-center text-white transition-colors border rounded-lg border-white/20 hover:bg-white/10"
-            >
-              Source Code
-            </a>
+        <img src={image} alt={title} className="w-full rounded-t-2xl" />
+        <div className="p-4 sm:p-5">
+          <h5 className="mb-2 text-xl font-bold text-white sm:text-2xl">{title}</h5>
+          <p className="mb-3 text-sm font-normal text-neutral-400 sm:text-base">{description}</p>
+          {subDescription.map((subDesc, index) => (
+            <p key={index} className="mb-3 text-sm font-normal text-neutral-400 sm:text-base">{subDesc}</p>
+          ))}
+          <div className="flex flex-col gap-4 mt-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap gap-3">
+              {tags.map((tag) => (
+                <img
+                  key={tag.id}
+                  src={tag.path}
+                  alt={tag.name}
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg hover-animation"
+                />
+              ))}
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+              {sourceCode && (
+                <a
+                  href={sourceCode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg cursor-pointer hover:bg-neutral-800 sm:text-base"
+                >
+                  View Source Code{" "}
+                  <img src="/assets/logos/github.svg" className="w-4 h-4 sm:w-5 sm:h-5 invert" alt="github" />
+                </a>
+              )}
+              {href && (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg cursor-pointer hover:bg-neutral-800 sm:text-base"
+                >
+                  View Project{" "}
+                  <img src="/assets/arrow-right.svg" className="w-4 h-4 sm:w-5 sm:h-5" alt="arrow" />
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </motion.div>

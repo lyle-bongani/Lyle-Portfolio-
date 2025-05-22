@@ -17,8 +17,8 @@ const About = () => {
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Lyle Chadya</p>
-            <p className="subtext">
+            <p className="text-lg font-semibold text-white sm:text-xl headtext">Hi, I'm Lyle Chadya</p>
+            <p className="text-sm leading-relaxed text-neutral-200 sm:text-base subtext">
               I'm a Software Developer with a passion for crafting innovative digital experiences. After joining Uncommon.org's bootcamp in Bulawayo, I embarked on an exciting journey into Software Development. As I continue to grow in the development space, I'm eager to build impactful digital experiences, explore new technologies, and contribute to innovative projects.
             </p>
           </div>
@@ -30,7 +30,7 @@ const About = () => {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500">
+            <p className="flex items-end text-3xl text-gray-500 sm:text-5xl">
               CODE IS CRAFT
             </p>
             <Card
@@ -77,9 +77,9 @@ const About = () => {
         </div>
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
-            <p className="subtext">
+          <div className="z-10 w-[80%] sm:w-[50%]">
+            <p className="text-lg font-semibold text-white sm:text-xl headtext">Time Zone</p>
+            <p className="text-sm leading-relaxed text-neutral-200 sm:text-base subtext">
               I'm based in Bulawayo, Zimbabwe, and open to remote work worldwide
             </p>
           </div>
@@ -90,22 +90,26 @@ const About = () => {
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
           <div className="flex flex-col items-center justify-center gap-4 size-full">
-            <p className="text-center headtext">
+            <p className="text-lg font-semibold text-center text-white sm:text-xl headtext">
               Do you want to start a project together?
             </p>
             <CopyEmailButton />
           </div>
         </div>
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
-            <p className="headText">Tech Stack</p>
-            <p className="subtext">
+        <div className="grid-default-color grid-5 min-h-[21rem]">
+          <div className="z-10 w-[80%] sm:w-[50%]">
+            <p className="text-lg font-semibold text-white sm:text-xl headText">Tech Stack</p>
+            <p className="text-sm leading-relaxed text-neutral-200 sm:text-base subtext">
               I specialize in modern web development with expertise in React, Next.js, and TypeScript. My skills include frontend frameworks, backend development with Node.js and Express, and cloud services like Firebase. I'm also proficient in UI/UX with Tailwind CSS, Material UI, and Framer Motion for creating engaging user experiences.
             </p>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            <Frameworks />
+          <div className="absolute inset-y-0 w-full h-full start-[50%] md:inset-y-9 md:scale-125">
+            <div className="relative w-full h-full">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Frameworks />
+              </div>
+            </div>
           </div>
         </div>
       </div>
