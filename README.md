@@ -118,7 +118,6 @@ The contact form uses FormSubmit.co for handling submissions. To set up your own
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/itsjust_lyle/) 
 [![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white)](https://github.com/lyle-bongani)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lyle-chadya-368930358/)
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA)
 
 ## 💡 Suggestions or Feedback?
 Feel free to:
