@@ -1,5 +1,39 @@
 export const myProjects = [
   {
+    id: 0,
+    title: "Zentry",
+    description:
+      "A cutting-edge web design showcase that demonstrates the power of modern web technologies. This project features advanced animations, geometric transitions, and immersive storytelling, all built with React, GSAP, and Tailwind CSS.",
+    subDescription: [
+      "Built with React for a dynamic and interactive user experience",
+      "Implemented advanced animations using GSAP for smooth transitions",
+      "Created geometric transitions and immersive storytelling elements",
+      "Utilized Tailwind CSS for modern, responsive design",
+      "Inspired by the original Zentry design while adding unique features",
+    ],
+    href: "https://zentry-rust-zeta.vercel.app/",
+    sourceCode: "https://github.com/lyle-bongani/Zentry.git",
+    logo: "/assets/logos/react.svg",
+    image: "/assets/projects/zentry.png",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "GSAP",
+        path: "/assets/logos/gsap.svg",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      }
+    ],
+  },
+  {
     id: 1,
     title: "Main Portfolio",
     description:
