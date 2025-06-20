@@ -86,54 +86,6 @@ npm install
 ```bash
 npm run dev
 ```
-The app will be available at http://localhost:5173.
 
-## 🔧 Configuration
-
-### Contact Form
-The contact form uses FormSubmit.co for handling submissions. To set up your own form:
-1. Replace the email address in `Contact.jsx` with your own
-2. Submit the form once to activate your FormSubmit.co account
-3. Check your email for the activation link
-
-### Customization
-- Update personal information in `src/constants/index.js`
-- Modify styles in `tailwind.config.js`
-- Add your own 3D models in `public/models/`
-- Update images in `public/assets/`
-
-## 📱 Responsive Design
-- Mobile-first approach
-- Optimized for all screen sizes
-- Touch-friendly interactions
-- Responsive typography and spacing
-
-## 🔒 Security Features
-- Form spam protection
-- Secure form submission
-- Protected API endpoints
-- XSS prevention
-
-## 📬 Contact Me
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/itsjust_lyle/) 
-[![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white)](https://github.com/lyle-bongani)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lyle-chadya-368930358/)
-
-## 💡 Suggestions or Feedback?
-Feel free to:
-- Open an issue
-- Submit a pull request
-- Contact me directly through the portfolio website
-
-## ⭐ Like This Project?
-- Star the repository
-- Share with your network
-- Follow me on social media
-- Subscribe to my YouTube channel for more dev content!
-
-## 📄 License
-This project is open source and available under the [MIT License](LICENSE).
-
----
 
 Made with ❤️ by Lyle Chadya
