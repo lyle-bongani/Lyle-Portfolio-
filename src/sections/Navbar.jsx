@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import PropTypes from "prop-types";
 
 function Navigation({ isMobile = false, onItemClick }) {
   const menuItems = [
@@ -46,6 +47,11 @@ function Navigation({ isMobile = false, onItemClick }) {
     </ul>
   );
 }
+
+Navigation.propTypes = {
+  isMobile: PropTypes.bool,
+  onItemClick: PropTypes.func,
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,7 +104,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-4">
           <motion.a
             href="/"
-            className="text-xl font-bold transition-colors text-neutral-400 hover:text-white relative group"
+            className="text-2xl md:text-3xl font-bold transition-colors text-neutral-400 hover:text-white relative group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
