@@ -107,7 +107,7 @@ export const myProjects = [
       "Added detailed Pokémon information display with stats and abilities",
       "Created responsive grid layout with search and filter functionality",
     ],
-    href: "https://pok-dex-iota.vercel.app/",
+    href: "https://pok-dex-gilt.vercel.app/",
     sourceCode: "https://github.com/lyle-bongani/Pok-Dex",
     logo: "/assets/logos/typescript.svg",
     image: "/assets/projects/pok-dex.png",
@@ -280,13 +280,14 @@ export const experiences = [
     ],
   },
   {
-    title: "Tech Connect",
-    job: "Full-Stack Web Application | Uncommon.org",
-    date: "2025 - Present",
+    title: "App and Web Developer Intern",
+    job: "SpeMedia",
+    date: "June 2025 - September 2025",
     contents: [
-      "Built a responsive full-stack web platform enabling user authentication and data management using Firebase Authentication and Cloud Firestore",
-      "Utilized Next.js for SSR/CSR efficiency and Styled Components for dynamic, scalable component-based styling",
-      "Deployed via Vercel with CI/CD integration for seamless updates and production-ready delivery"
+      "Developed and deployed multiple client-facing websites from concept to completion, including George Mose, Springwaters, and Design Culture.",
+      "Played a key role in developing confidential web applications, focusing on building intuitive user interfaces and ensuring cross-browser compatibility.",
+      "Actively participated in team meetings and code reviews, incorporating feedback to improve code quality and adhere to company-wide development standards.",
+      "Worked closely with the design team to implement pixel-perfect UIs and enhance the overall user experience across all projects."
     ],
   }
 ];

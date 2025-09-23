@@ -24,7 +24,9 @@ const Projects = () => {
     >
       <h2 className="text-heading">My Selected Projects</h2>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
-      {myProjects.map((project) => (
+      {myProjects
+        .filter((project) => project.title !== "Tech Connect")
+        .map((project) => (
         <Project key={project.id} {...project} setPreview={setPreview} />
       ))}
       {preview && window.innerWidth >= 640 && (
