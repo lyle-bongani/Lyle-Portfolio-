@@ -8,7 +8,7 @@ const Footer = () => {
   const [showPrivacy, setShowPrivacy] = useState(false);
 
   return (
-    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 px-2 sm:px-6 lg:px-8">
+    <section className="w-[90%] mx-auto flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 px-0 sm:px-0 lg:px-0 mt-24 md:mt-32">
       <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
       <div className="flex gap-2">
         <button

@@ -1,21 +1,8 @@
-import { useState } from "react";
-import Alert from "../components/Alert";
+// no state needed here currently
 import { Particles } from "../components/Particles";
 
 const Contact = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState("success");
-  const [alertMessage, setAlertMessage] = useState("");
-
-  const showAlertMessage = (type, message) => {
-    setAlertType(type);
-    setAlertMessage(message);
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 5000);
-  };
+  // You can show a toast/alert on submit success if needed
 
   return (
     <section className="relative flex items-center c-space section-spacing">
@@ -26,13 +13,13 @@ const Contact = () => {
         color={"#ffffff"}
         refresh
       />
-      {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
+      {/* Optional alert can be shown here */}
+      <div className="flex flex-col items-center justify-center w-[90%] max-w-3xl md:max-w-4xl p-6 md:p-8 mx-auto border border-white/10 rounded-2xl bg-primary">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Let's Talk</h2>
+          <h2 className="text-heading">Let&apos;s Talk</h2>
           <p className="font-normal text-neutral-400">
-            Whether you're looking to build a new website, improve your existing
-            platform, or bring a unique project to life, I'm here to help
+            Whether you&apos;re looking to build a new website, improve your existing
+            platform, or bring a unique project to life, I&apos;m here to help
           </p>
         </div>
         <form
