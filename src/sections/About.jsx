@@ -97,15 +97,15 @@ const About = () => {
           </div>
         </div>
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5 min-h-[18rem] pb-0">
-          <div className="z-10 w-[80%] sm:w-[50%]">
-            <p className="text-lg font-semibold text-white sm:text-xl headText">Tech Stack</p>
+        <div className="grid-default-color grid-5 relative !h-auto min-h-[25.3rem] md:min-h-[18rem] pb-0 flex flex-col md:block overflow-hidden">
+          <div className="z-10 w-full md:w-[50%]">
+            <p className="text-lg font-semibold text-white sm:text-xl headtext">Tech Stack</p>
             <p className="text-sm leading-relaxed text-neutral-200 sm:text-base subtext">
               I specialize in modern web development with expertise in React, Next.js, and TypeScript. My skills include frontend frameworks, backend development with Node.js and Express, and cloud services like Firebase. I'm also proficient in UI/UX with Tailwind CSS, Material UI, and Framer Motion for creating engaging user experiences.
             </p>
           </div>
-          <div className="absolute inset-x-0 bottom-0 top-0 w-full start-[50%] md:-top-10 md:scale-125">
-            <div className="relative w-full h-full">
+          <div className="absolute inset-x-0 bottom-0 translate-y-1/2 md:translate-y-0 md:top-0 w-full md:start-[50%] md:-top-10 md:scale-125">
+            <div className="relative w-full h-[20.3rem] md:h-full">
               <div className="absolute inset-0 flex items-center justify-center">
                 <Frameworks />
               </div>

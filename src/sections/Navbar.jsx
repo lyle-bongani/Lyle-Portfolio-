@@ -11,36 +11,38 @@ function Navigation({ isMobile = false, onItemClick }) {
   ];
 
   const itemVariants = {
-    closed: { opacity: 0, y: -10 },
+    closed: { opacity: 0, y: -20 },
     open: (i) => ({
       opacity: 1,
       y: 0,
       transition: {
         delay: i * 0.1,
-        duration: 0.3,
+        duration: 0.5,
         ease: "easeOut",
       },
     }),
   };
 
   return (
-    <ul className={`nav-ul ${isMobile ? "flex-col space-y-8" : ""}`}>
+    <ul className={`nav-ul ${isMobile ? "flex-col items-center justify-center space-y-10" : ""}`}>
       {menuItems.map((item, i) => (
         <motion.li
           key={item.href}
-          className="nav-li"
+          className={isMobile ? "w-full text-center" : "nav-li"}
           custom={i}
-          variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
+          variants={isMobile ? itemVariants : {}}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
           <a
-            className="nav-link relative group text-neutral-400 hover:text-white transition-colors duration-300"
+            className={`${isMobile ? "text-4xl font-bold" : "nav-link"} relative group text-neutral-400 hover:text-white transition-colors duration-300`}
             href={item.href}
             onClick={onItemClick}
           >
             {item.label}
-            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full" />
+            {!isMobile && (
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full" />
+            )}
           </a>
         </motion.li>
       ))}
@@ -62,9 +64,18 @@ const Navbar = () => {
       setScrolled(window.scrollY > 20);
     };
 
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   const handleItemClick = () => {
     setIsOpen(false);
@@ -73,26 +84,23 @@ const Navbar = () => {
   const menuVariants = {
     closed: {
       opacity: 0,
-      y: -20,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
         ease: "easeInOut",
       },
     },
     open: {
       opacity: 1,
-      y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.4,
         ease: "easeOut",
-        staggerChildren: 0.1,
       },
     },
   };
 
   return (
     <motion.div
-      className={`fixed inset-x-0 z-50 w-full transition-all duration-300 ${scrolled
+      className={`fixed inset-x-0 z-50 w-full transition-all duration-300 ${scrolled && !isOpen
           ? "bg-primary/80 backdrop-blur-lg shadow-lg shadow-indigo-500/10"
           : "bg-transparent"
         }`}
@@ -113,26 +121,30 @@ const Navbar = () => {
           </motion.a>
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden relative group"
+            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none md:hidden relative z-[60] p-2"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle menu"
           >
-            <motion.div
-              animate={isOpen ? "open" : "closed"}
-              variants={{
-                open: { rotate: 45, y: 6 },
-                closed: { rotate: 0, y: 0 },
-              }}
-              transition={{ duration: 0.2 }}
-              className="w-6 h-6 relative"
-            >
-              <span className="absolute w-6 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 top-0 rounded-full" />
-              <span className="absolute w-6 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 top-3 rounded-full" />
-              <span className="absolute w-6 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 top-6 rounded-full" />
-            </motion.div>
+            <div className="w-6 h-6 relative flex items-center justify-center">
+              <motion.span
+                animate={isOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -7 }}
+                className="absolute w-6 h-0.5 bg-white rounded-full"
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span
+                animate={isOpen ? { opacity: 0, x: 20 } : { opacity: 1, x: 0 }}
+                className="absolute w-6 h-0.5 bg-white rounded-full"
+                transition={{ duration: 0.2 }}
+              />
+              <motion.span
+                animate={isOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 7 }}
+                className="absolute w-6 h-0.5 bg-white rounded-full"
+                transition={{ duration: 0.3 }}
+              />
+            </div>
           </motion.button>
-          <nav className="hidden sm:flex">
+          <nav className="hidden md:flex">
             <Navigation />
           </nav>
         </div>
@@ -140,13 +152,13 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute inset-x-0 top-full bg-primary/95 backdrop-blur-lg sm:hidden border-t border-indigo-500/20"
+            className="fixed inset-0 min-h-screen glass-morphism md:hidden z-50 flex flex-col items-center justify-center"
             initial="closed"
             animate="open"
             exit="closed"
             variants={menuVariants}
           >
-            <nav className="py-8">
+            <nav className="w-full">
               <Navigation isMobile={true} onItemClick={handleItemClick} />
             </nav>
           </motion.div>
