@@ -35,47 +35,43 @@ const Contact = () => {
 
           {/* Email Template Customization */}
           <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_subject" value="🚀 EMERGENCY: Someone wants to build something EPIC!" />
-          <input type="hidden" name="_autoresponse" value="Hooray! Your message just landed in my digital inbox like a shooting star. 🌠 I'm probably refing some code or dreaming of space-age UIs, but I'll get back to you faster than a warp drive jump. Stay awesome!" />
+          <input type="hidden" name="_subject" value="New Portfolio Message: Let's Connect!" />
+          <input type="hidden" name="_autoresponse" value="Thank you for reaching out! I've received your message and will get back to you as soon as possible. Have a great day!" />
           
-          {/* Fun Meta Data for the Email recipient */}
-          <input type="hidden" name="Priority" value="Level: Galactic ⚡" />
-          <input type="hidden" name="Vibe_Check" value="Passed (Obviously) ✅" />
-
           {/* Specify redirect after submission */}
           <input type="hidden" name="_next" value={window.location.href} />
 
           <div className="mb-5">
             <label htmlFor="name" className="feild-label">
-              What do your humans call you? (Full Name)
+              Full Name
             </label>
             <input
               id="name"
               name="Name"
               type="text"
               className="field-input field-input-focus"
-              placeholder="e.g. Star-Lord"
+              placeholder="Enter your full name"
               autoComplete="name"
               required
             />
           </div>
           <div className="mb-5">
             <label htmlFor="email" className="feild-label">
-              Where should my space-pigeon drop the reply? (Email)
+              Email Address
             </label>
             <input
               id="email"
               name="Email"
               type="email"
               className="field-input field-input-focus"
-              placeholder="future_partner@galaxy.com"
+              placeholder="your.email@example.com"
               autoComplete="email"
               required
             />
           </div>
           <div className="mb-5">
             <label htmlFor="message" className="feild-label">
-              What&apos;s the big idea? (Tell me everything!)
+              Your Message
             </label>
             <textarea
               id="message"
@@ -83,7 +79,7 @@ const Contact = () => {
               type="text"
               rows="4"
               className="field-input field-input-focus"
-              placeholder="I have a wild vision for a..."
+              placeholder="How can I help you?"
               required
             />
           </div>
@@ -91,7 +87,7 @@ const Contact = () => {
             type="submit"
             className="w-full px-1 py-3 text-lg font-bold text-center text-white rounded-md cursor-pointer bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-indigo-500/20"
           >
-            LAUNCH MESSAGE 🚀
+            Send Message
           </button>
         </form>
       </div>
