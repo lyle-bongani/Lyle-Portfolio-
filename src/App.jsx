@@ -9,9 +9,9 @@ import Footer from './sections/Footer';
 
 const App = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
+      <Navbar />
       <div className="container mx-auto max-w-7xl">
-        <Navbar />
         <Hero />
         <About />
         <Projects />
@@ -20,7 +20,7 @@ const App = () => {
         <Contact />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

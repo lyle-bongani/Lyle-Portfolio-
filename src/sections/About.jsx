@@ -22,7 +22,7 @@ const About = () => {
               I'm a Software Developer with a passion for crafting innovative digital experiences. After joining Uncommon.org's bootcamp in Bulawayo, I embarked on an exciting journey into Software Development. As I continue to grow in the development space, I'm eager to build impactful digital experiences, explore new technologies, and contribute to innovative projects.
             </p>
           </div>
-          <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
@@ -97,14 +97,14 @@ const About = () => {
           </div>
         </div>
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5 min-h-[21rem]">
+        <div className="grid-default-color grid-5 min-h-[18rem] pb-0">
           <div className="z-10 w-[80%] sm:w-[50%]">
             <p className="text-lg font-semibold text-white sm:text-xl headText">Tech Stack</p>
             <p className="text-sm leading-relaxed text-neutral-200 sm:text-base subtext">
               I specialize in modern web development with expertise in React, Next.js, and TypeScript. My skills include frontend frameworks, backend development with Node.js and Express, and cloud services like Firebase. I'm also proficient in UI/UX with Tailwind CSS, Material UI, and Framer Motion for creating engaging user experiences.
             </p>
           </div>
-          <div className="absolute inset-y-0 w-full h-full start-[50%] md:inset-y-9 md:scale-125">
+          <div className="absolute inset-x-0 bottom-0 top-0 w-full start-[50%] md:-top-10 md:scale-125">
             <div className="relative w-full h-full">
               <div className="absolute inset-0 flex items-center justify-center">
                 <Frameworks />

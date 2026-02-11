@@ -61,7 +61,7 @@ export function Frameworks() {
   ];
 
   return (
-    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
+    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center overflow-hidden">
       <OrbitingCircles iconSize={35} radius={140} className="sm:scale-100 scale-50">
         {skills.map((skill, index) => (
           <Icon key={index} src={skill.icon} alt={skill.name} />

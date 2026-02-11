@@ -16,7 +16,7 @@ const Hero = () => {
       <ParallaxBackground />
       <figure
         className="absolute inset-0"
-        style={{ width: "100vw", height: "100vh" }}
+        style={{ width: "100%", height: "100%" }}
       >
         <Canvas camera={{ position: [0, 1, 3] }}>
           <Suspense fallback={<Loader />}>

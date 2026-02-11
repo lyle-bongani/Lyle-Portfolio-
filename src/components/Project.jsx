@@ -8,6 +8,7 @@ const Project = ({
   href,
   sourceCode,
   image,
+  isPrivate,
   tags,
   setPreview,
 }) => {
@@ -45,6 +46,7 @@ const Project = ({
           tags={tags}
           href={href}
           sourceCode={sourceCode}
+          isPrivate={isPrivate}
           closeModal={() => setIsHidden(false)}
         />
       )}

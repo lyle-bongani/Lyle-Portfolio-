@@ -12,7 +12,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
     }
     return () => {
       document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = "";
+      document.body.style.overflow = "auto";
     };
   }, [isOpen, onClose]);
 

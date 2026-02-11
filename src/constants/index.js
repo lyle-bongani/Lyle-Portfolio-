@@ -35,64 +35,95 @@ export const myProjects = [
   },
   {
     id: 1,
-    title: "Main Portfolio",
+    title: "Hogar Dorado House",
     description:
-      "A modern portfolio website showcasing my projects and skills.",
+      "Hogar Dorado House is a modern real estate website built with React and TypeScript, designed to deliver a clean, responsive, and high-end user experience for showcasing premium property listings.",
     subDescription: [
-      "Built with React for a dynamic and interactive user experience",
-      "Implemented smooth animations and transitions",
-      "Created responsive design using TailwindCSS",
-      "Added interactive elements and modern UI components",
-      "Integrated contact form for direct communication",
+      "Frontend built with Material UI, Emotion, and Tailwind CSS for flexible styling",
+      "Smooth animations implemented with Framer Motion and GSAP",
+      "Dynamic property management using Google Sheets as a CMS and Google Apps Script",
+      "Optimized for performance and SEO with prerendering",
+      "Note: Github repository is private as it belongs to a client",
     ],
-    href: "https://my-main-portfolio-self.vercel.app/",
-    sourceCode: "https://github.com/lyle-bongani/my-main-portfolio",
+    href: "https://www.hogardoradohouse.com/",
+    sourceCode: "https://github.com/lyle-bongani/Hogar-Dorado-House",
     logo: "/assets/logos/react.svg",
-    image: "/assets/projects/main-portfolio.png",
+    image: "/assets/projects/hogerhouse.png",
+    isPrivate: true,
     tags: [
       {
         id: 1,
         name: "React",
-        path: "/assets/react.svg",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 2,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      }
-    ],
-  },
-  {
-    id: 2,
-    title: "Fry-lyle-app",
-    description:
-      "A modern TypeScript portfolio application with 3D animations and interactive elements.",
-    subDescription: [
-      "Built with React and TypeScript for type safety and better development experience",
-      "Implemented 3D animations using Three.js and React Three Fiber",
-      "Added smooth transitions and scroll-based animations with Framer Motion",
-      "Integrated responsive design using TailwindCSS for modern UI",
-      "Cross-platform support for both desktop and mobile devices",
-    ],
-    href: "https://typscript-portfolio.vercel.app/splash",
-    sourceCode: "https://github.com/lyle-bongani/Fry-lyle-app",
-    logo: "/assets/logos/typescript.svg",
-    image: "/assets/projects/fry-lyle.png",
-    tags: [
-      {
-        id: 1,
         name: "TypeScript",
-        path: "/assets/typescript.svg",
-      },
-      {
-        id: 2,
-        name: "React",
-        path: "/assets/react.svg",
+        path: "/assets/logos/javascript.svg",
       },
       {
         id: 3,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 4,
+        name: "GSAP",
+        path: "/assets/logos/gsap.svg",
+      },
+      {
+        id: 5,
+        name: "Framer Motion",
+        path: "/assets/logos/framer.svg",
+      },
+      {
+        id: 6,
+        name: "Google Sheets",
+        path: "/assets/logos/googlesheets.svg",
+      }
+    ],
+  },
+  {
+    id: 2,
+    title: "Community Portal",
+    description:
+      "Community Portal is a full-stack community platform designed to support real-time interaction, content sharing, and event management with clear role-based access for admins and users. It features a RESTful backend built with Node.js, Express, and TypeScript, using JWT authentication, Socket.IO for real-time updates.",
+    subDescription: [
+      "Modern application built with Next.js 16, React 19, and Tailwind CSS",
+      "Enhanced with Framer Motion animations and real-time WebSocket communication",
+      "Supports user authentication, posts, event creation, and live notifications",
+      "Includes a dedicated admin dashboard for moderation and analytics",
+      "Demonstrates clean architecture and production-ready deployment practices",
+    ],
+    href: "https://www.communityportal.online/",
+    sourceCode: "https://github.com/lyle-bongani/Community-portal",
+    logo: "/assets/logos/react.svg",
+    image: "/assets/projects/community portal.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 2,
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "/assets/logos/javascript.svg",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 5,
+        name: "Socket.IO",
+        path: "/assets/logos/socketdotio.svg",
       }
     ],
   },
@@ -131,73 +162,158 @@ export const myProjects = [
   },
   {
     id: 4,
-    title: "Backers New Inn",
+    title: "Pro Action Sports",
     description:
-      "A comprehensive hotel management system with booking and room management features.",
+      "Pro Action Sports is an online presence for Zambia’s full-fledged sports equipment and gear store, offering a wide range of athletic, fitness, and adventure products.",
     subDescription: [
-      "Built with Next.js for server-side rendering and optimal performance",
-      "Implemented room availability checking and booking system",
-      "Added admin dashboard for managing bookings and rooms",
-      "Integrated with backend services for real-time updates",
+      "Built with React and TypeScript for a modern, component-based frontend",
+      "Leverages Emotion, Material UI, and Tailwind CSS for flexible and responsive UI styling",
+      "Enhanced with Framer Motion animations for an engaging user experience",
+      "Client-side routing handled with React Router",
+      "Optimized performance with static page generation routines",
+      "Note: Github repository is private as it belongs to a client",
     ],
-    href: "https://backers-new-inn.vercel.app/",
-    sourceCode: "https://github.com/lyle-bongani/Backers-New-Inn",
-    logo: "/assets/logos/vitejs.svg",
-    image: "/assets/projects/backers-inn.png",
+    href: "https://www.proactionsports.co.zm/",
+    sourceCode: "https://github.com/lyle-bongani/sports",
+    logo: "/assets/logos/react.svg",
+    image: "/assets/projects/proactionsports.png",
+    isPrivate: true,
     tags: [
       {
         id: 1,
-        name: "Next.js",
-        path: "/assets/logos/vitejs.svg",
+        name: "React",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 2,
-        name: "React",
-        path: "/assets/react.svg",
-      },
-      {
-        id: 3,
         name: "TypeScript",
-        path: "/assets/typescript.svg",
-      }
-    ],
-  },
-  {
-    id: 5,
-    title: "StreamMax",
-    description:
-      "A Netflix-inspired streaming platform with movie and TV show content.",
-    subDescription: [
-      "Developed using React and TypeScript for robust frontend",
-      "Implemented user authentication and profile management",
-      "Added movie/show browsing with categories and search",
-      "Integrated with backend services for content streaming",
-      "Mobile-first web application optimized for on-the-go entertainment",
-    ],
-    href: "https://stream-max-ruddy.vercel.app/",
-    sourceCode: "https://github.com/lyle-bongani/StreamMax",
-    logo: "/assets/logos/typescript.svg",
-    image: "/assets/projects/stream-max.png",
-    tags: [
-      {
-        id: 1,
-        name: "TypeScript",
-        path: "/assets/typescript.svg",
-      },
-      {
-        id: 2,
-        name: "React",
-        path: "/assets/react.svg",
+        path: "/assets/logos/javascript.svg",
       },
       {
         id: 3,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 4,
+        name: "Material UI",
+        path: "/assets/logos/mui.svg",
+      },
+      {
+        id: 5,
+        name: "Framer Motion",
+        path: "/assets/logos/framer.svg",
+      },
+      {
+        id: 6,
+        name: "Emotion",
+        path: "/assets/logos/emotion.svg",
+      }
+    ],
+  },
+  {
+    id: 5,
+    title: "Logo Branded Door Mats Zambia",
+    description:
+      "Logo Branded Door Mats Zambia is a modern business website built to showcase and promote custom, logo-branded entrance mats for offices, shops, schools, and commercial spaces across Zambia.",
+    subDescription: [
+      "Developed with React and TypeScript, focusing on a clean, professional layout",
+      "Highlights product quality, branding impact, and ease of enquiry",
+      "Material UI, Emotion, and Tailwind CSS for a flexible, responsive design system",
+      "Framer Motion adds smooth, subtle animations that enhance the browsing experience",
+      "Build process includes static HTML generation for performance and SEO",
+      "Note: Github repository is private as it belongs to a client",
+    ],
+    href: "https://www.logobrandeddoormats.co.zm/",
+    sourceCode: "https://github.com/lyle-bongani/matts",
+    logo: "/assets/logos/react.svg",
+    image: "/assets/projects/logobrandedmatts.png",
+    isPrivate: true,
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/javascript.svg",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 4,
+        name: "Material UI",
+        path: "/assets/logos/mui.svg",
+      },
+      {
+        id: 5,
+        name: "Framer Motion",
+        path: "/assets/logos/framer.svg",
+      },
+      {
+        id: 6,
+        name: "Emotion",
+        path: "/assets/logos/emotion.svg",
       }
     ],
   },
   {
     id: 6,
+    title: "Bizani Media",
+    description:
+      "Bizani Media is a modern digital presence built to showcase a Zimbabwe-based creative agency that specializes in video production, branding, photography, and multimedia storytelling.",
+    subDescription: [
+      "Structured, scalable frontend architecture using React and TypeScript",
+      "Material UI, Emotion, and Tailwind CSS for a flexible and responsive design system",
+      "Framer Motion for smooth animations and transitions",
+      "Optimized performance and SEO with static HTML generation",
+      "Production-ready marketing site effectively highlighting creative services",
+    ],
+    href: "https://www.bizani.co.zw/",
+    sourceCode: "https://github.com/lyle-bongani/bizani.git",
+    logo: "/assets/logos/react.svg",
+    image: "/assets/projects/bizani.png",
+    isPrivate: true,
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/javascript.svg",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 4,
+        name: "Material UI",
+        path: "/assets/logos/mui.svg",
+      },
+      {
+        id: 5,
+        name: "Framer Motion",
+        path: "/assets/logos/framer.svg",
+      },
+      {
+        id: 6,
+        name: "Emotion",
+        path: "/assets/logos/emotion.svg",
+      }
+    ],
+  },
+  {
+    id: 7,
     title: "Tech Connect",
     description:
       "A mobile application for tech professionals to network and collaborate.",
@@ -216,17 +332,17 @@ export const myProjects = [
       {
         id: 1,
         name: "Next.js",
-        path: "/assets/logos/vitejs.svg",
+        path: "/assets/logos/nextjs.svg",
       },
       {
         id: 2,
         name: "React",
-        path: "/assets/react.svg",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 3,
         name: "TypeScript",
-        path: "/assets/typescript.svg",
+        path: "/assets/logos/javascript.svg",
       }
     ],
   },
@@ -282,9 +398,9 @@ export const experiences = [
   {
     title: "App and Web Developer Intern",
     job: "SpeMedia",
-    date: "June 2025 - September 2025",
+    date: "June 2025 - January 2026",
     contents: [
-      "Developed and deployed multiple client-facing websites from concept to completion, including George Mose, Springwaters, and Design Culture.",
+      "Developed and deployed multiple client-facing websites from concept to completion, including George Mose, Springwaters, Design Culture, Pro Action Sports, Logo Branded Door Mats, and Bizani Media.",
       "Played a key role in developing confidential web applications, focusing on building intuitive user interfaces and ensuring cross-browser compatibility.",
       "Actively participated in team meetings and code reviews, incorporating feedback to improve code quality and adhere to company-wide development standards.",
       "Worked closely with the design team to implement pixel-perfect UIs and enhance the overall user experience across all projects."
